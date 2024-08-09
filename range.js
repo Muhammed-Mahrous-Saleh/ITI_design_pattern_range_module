@@ -24,11 +24,11 @@
 export default function* range(start, end, step = 1) {
     if (step > 0) {
         for (let i = start; i < end; i += step) {
-            yield { value: i, done: false };
+            yield i;
         }
     } else if (step < 0) {
         for (let i = start; i > end; i += step) {
-            yield { value: i, done: false };
+            yield i;
         }
     } else {
         throw "step value can't be zero.";
